@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fashion Sale</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <style>
+      /* General Reset */
+      /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      } */
+
+      /* Banner Image */
+      .banner-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+      }
+
+      /* body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        background-color: #f9f9f9;
+      } */
+
+      /* Search Bar */
+      .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        background-color: #f4f4f4;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .search-bar input {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        outline: none;
+      }
+
+      .search-bar .icons {
+        display: flex;
+        gap: 10px;
+        margin-left: 10px;
+      }
+
+      .search-bar .icons i {
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      /* Logo */
+      .logo {
+        text-align: center;
+        margin: 10px 0;
+      }
+
+      .logo img {
+        max-width: 150px;
+        height: auto;
+      }
+
+      /* Category Row */
+      .category-row {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+        background-color: #fff;
+        overflow-x: auto;
+      }
+
+      .category-item img {
+        width: 30px;
+        height: 30px;
+        border-radius: 10px;
+        object-fit: cover;
+        border: 2px solid #ddd;
+      }
+
+      .category-label {
+        text-align: center;
+        margin-top: 5px;
+        font-size: 0.8rem;
+        color: #000;
+      }
+
+      .category-wrapper {
+        text-align: center;
+        flex-shrink: 0;
+        margin: 0 10px;
+      }
+
+      /* Main Banner */
+      .main-banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        background-color: #ffcc99; /* Light Orange Background */
+        color: #fff;
+        overflow: hidden;
+        width: 100%;
+      }
+
+      .banner-content {
+        flex: 1;
+        padding: 20px;
+      }
+
+      .sale-badge {
+        background: #f00;
+        color: #fff;
+        padding: 5px 10px;
+        font-size: 0.9rem;
+        border-radius: 3px;
+        display: inline-block;
+      }
+
+      .category-highlight {
+        margin-top: 10px;
+        font-size: 1.1rem;
+      }
+
+      .banner-content h2 {
+        font-size: 2rem;
+        margin: 15px 0;
+      }
+
+      .banner-content p {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      .shop-now {
+        padding: 10px 20px;
+        background: #000;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      .shop-now:hover {
+        background: #333;
+      }
+
+      /* Banner Image */
+      .banner-image img {
+        width: 100%; /* Make Image Full Width */
+        height: auto;
+        border-radius: 10px;
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .main-banner {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .banner-content {
+          padding: 10px;
+        }
+
+        .banner-image img {
+          width: 80%;
+          margin-top: 20px;
+          border-radius: 0;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .search-bar input {
+          padding: 8px;
+          font-size: 0.9rem;
+        }
+
+        .banner-content h2 {
+          font-size: 1.5rem;
+        }
+
+        .banner-content p {
+          font-size: 1.2rem;
+        }
+
+        .shop-now {
+          padding: 8px 15px;
+          font-size: 0.9rem;
+        }
+
+        .banner-image img {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="fashion-sale">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="./assets/img/Fasion/logo1.png" alt="Logo" />
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search by product, brands..." />
+        <div class="icons">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-shopping-bag"></i>
+        </div>
+      </div>
+
+      <!-- Category Row -->
+      <div class="category-row">
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b1.jpeg"
+            alt="AJIO Luxe"
+            style="height: 120px"
+          />
+          <div class="category-label">AJIO LUXE</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b2.jpeg"
+            alt="Sneakerhood"
+            style="height: 120px"
+          />
+          <div class="category-label">Sneakerhood</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b3.jpeg"
+            alt="Clearance Store"
+            style="height: 120px"
+          />
+          <div class="category-label">Clearance Store</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b4.jpeg"
+            alt="Top Deals"
+            style="height: 120px"
+          />
+          <div class="category-label">Top Deals</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b5.jpeg"
+            alt="Accessories"
+            style="height: 120px"
+          />
+          <div class="category-label">Accessories</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b3.jpeg"
+            alt="Clearance Store"
+            style="height: 120px"
+          />
+          <div class="category-label">Clearance Store</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b4.jpeg"
+            alt="Top Deals"
+            style="height: 120px"
+          />
+          <div class="category-label">Top Deals</div>
+        </div>
+        <div class="category-wrapper">
+          <img
+            src="./assets/img/Fasion/b5.jpeg"
+            alt="Accessories"
+            style="height: 120px"
+          />
+          <div class="category-label">Accessories</div>
+        </div>
+      </div>
+
+      <!-- Main Banner -->
+      <div class="main-banner">
+        <div class="banner-content">
+          <div class="sale-badge">GIANT FASHION SALE</div>
+          <div class="category-highlight">⭐ Category Of The Day ⭐</div>
+          <h2>Winterwear</h2>
+          <p>30-60% OFF*</p>
+          <button class="shop-now">SHOP NOW</button>
+        </div>
+        <div class="banner-image">
+          <img
+            src="./assets/img/Fasion/istockphoto-965902560-612x612.jpg"
+            alt="Winterwear Sale"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

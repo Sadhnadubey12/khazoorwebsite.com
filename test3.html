@@ -25,201 +25,6 @@
     <link rel="stylesheet" href="assets/css/spacing.css" />
     <link rel="stylesheet" href="assets/css/main.css" />
   </head>
-
-  <style>
-    /* General Reset */
-    /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      } */
-
-    /* Banner Image */
-    /* .banner-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-    } */
-
-    /* body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f9f9f9;
-      } */
-
-    /* Search Bar */
-    .search-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 15px;
-      background-color: #f4f4f4;
-      border-bottom: 1px solid #ccc;
-    }
-
-    .search-bar input {
-      flex: 1;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 20px;
-      outline: none;
-    }
-
-    .search-bar .icons {
-      display: flex;
-      gap: 10px;
-      margin-left: 10px;
-    }
-
-    .search-bar .icons i {
-      font-size: 1.5rem;
-      cursor: pointer;
-    }
-
-    /* Logo */
-    .logo {
-      text-align: center;
-      margin: 10px 0;
-    }
-
-    .logo img {
-      max-width: 150px;
-      height: auto;
-    }
-
-    /* Category Row */
-    .category-row {
-      display: flex;
-      justify-content: space-around;
-      padding: 10px 0;
-      background-color: #fff;
-      overflow-x: auto;
-    }
-
-    .category-item img {
-      width: 30px;
-      height: 30px;
-      border-radius: 10px;
-      object-fit: cover;
-      border: 2px solid #ddd;
-    }
-
-    .category-label {
-      text-align: center;
-      margin-top: 5px;
-      font-size: 0.8rem;
-      color: #000;
-    }
-
-    .category-wrapper {
-      text-align: center;
-      flex-shrink: 0;
-      margin: 0 10px;
-    }
-
-    /* Main Banner */
-    .main-banner {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px;
-      color: #fff;
-      overflow: hidden;
-      width: 100%;
-    }
-
-    .banner-content {
-      flex: 1;
-      padding: 20px;
-    }
-
-    .sale-badge {
-      background: #f00;
-      color: #fff;
-      padding: 5px 10px;
-      font-size: 0.9rem;
-      border-radius: 3px;
-      display: inline-block;
-    }
-
-    .category-highlight {
-      margin-top: 10px;
-      font-size: 1.1rem;
-    }
-
-    .banner-content h2 {
-      font-size: 2rem;
-      margin: 15px 0;
-    }
-
-    .banner-content p {
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
-
-    .shop-now {
-      padding: 10px 20px;
-      background: #000;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    .shop-now:hover {
-      background: #333;
-    }
-
-    /* Banner Image */
-    .banner-image img {
-      width: 100%; /* Make Image Full Width */
-      height: auto;
-      border-radius: 10px;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-      .main-banner {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .banner-content {
-        padding: 10px;
-      }
-
-      .banner-image img {
-        width: 80%;
-        margin-top: 20px;
-        border-radius: 0;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .search-bar input {
-        padding: 8px;
-        font-size: 0.9rem;
-      }
-
-      .banner-content h2 {
-        font-size: 1.5rem;
-      }
-
-      .banner-content p {
-        font-size: 1.2rem;
-      }
-
-      .shop-now {
-        padding: 8px 15px;
-        font-size: 0.9rem;
-      }
-
-      .banner-image img {
-        width: 100%;
-      }
-    }
-  </style>
   <style>
     @media (max-width: 768px) {
       .tp-slider-item-2 {
@@ -372,7 +177,7 @@
           >
             <div class="offcanvas__logo logo">
               <a href="index.html">
-                <img src="assets/img/Fasion/logo2.png" alt="logo" />
+                <img src="assets/img/logo/logo.svg" alt="logo" />
               </a>
             </div>
           </div>
@@ -499,7 +304,37 @@
     <!-- mobile menu area end -->
 
     <!-- search area start -->
-
+    <section class="tp-search-area tp-search-style-secondary">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-search-form">
+              <div class="tp-search-close text-center mb-20">
+                <button
+                  class="tp-search-close-btn tp-search-close-btn"
+                ></button>
+              </div>
+              <form action="#">
+                <div class="tp-search-input mb-10">
+                  <input type="text" placeholder="Search for product..." />
+                  <button type="submit">
+                    <i class="flaticon-search-1"></i>
+                  </button>
+                </div>
+                <div class="tp-search-category">
+                  <span>Search by : </span>
+                  <a href="#">Men, </a>
+                  <a href="#">Women, </a>
+                  <a href="#">Children, </a>
+                  <a href="#">Shirt, </a>
+                  <a href="#">Demin</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- search area end -->
 
     <!-- cart mini area start -->
@@ -732,7 +567,7 @@
                       <img
                         src="assets/img/Fasion/logo2.png"
                         alt="logo"
-                        style="margin-left: -38px"
+                        style="margin-left: -18px"
                       />
                     </a>
                   </div>
@@ -1580,7 +1415,7 @@
                   <div
                     class="tp-header-bottom-right d-flex align-items-center justify-content-end pl-30"
                   >
-                    <!-- <div class="tp-header-search-2 d-none d-sm-block">
+                    <div class="tp-header-search-2 d-none d-sm-block">
                       <form action="#">
                         <input
                           type="text"
@@ -1611,7 +1446,7 @@
                           </svg>
                         </button>
                       </form>
-                    </div> -->
+                    </div>
                     <div
                       class="tp-header-action d-flex align-items-center ml-30"
                     >
@@ -1773,134 +1608,46 @@
 
     <main>
       <!-- slider area start -->
-      <section class="fashion-sale">
-        <!-- Logo -->
-        <!-- <div class="logo">
-          <img src="./assets/img/Fasion/logo1.png" alt="Logo" />
-        </div> -->
-
-        <!-- Search Bar -->
-        <div class="search-bar">
-          <div style="position: relative; width: 100%">
-            <input
-              type="text"
-              placeholder="Search by product, brands..."
-              style="width: 100%; padding-right: 30px"
-            />
-            <i
-              class="fa fa-search"
-              style="
-                position: absolute;
-                top: 50%;
-                right: 10px;
-                transform: translateY(-50%);
-              "
-            ></i>
-          </div>
-          <div class="icons">
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-shopping-bag"></i>
-          </div>
-        </div>
-
-        <!-- Category Row -->
-        <div class="category-row">
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b1.jpeg"
-              alt="AJIO Luxe"
-              style="height: 120px"
-            />
-            <div class="category-label">Khazoor LUXE</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b2.jpeg"
-              alt="Sneakerhood"
-              style="height: 120px"
-            />
-            <div class="category-label">Genz store</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b3.jpeg"
-              alt="Clearance Store"
-              style="height: 120px"
-            />
-            <div class="category-label">Accessories</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b4.jpeg"
-              alt="Top Deals"
-              style="height: 120px"
-            />
-            <div class="category-label">Beauty</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b5.jpeg"
-              alt="Accessories"
-              style="height: 120px"
-            />
-            <div class="category-label">Top Deals</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b3.jpeg"
-              alt="Clearance Store"
-              style="height: 120px"
-            />
-            <div class="category-label">Clearance Store</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b4.jpeg"
-              alt="Top Deals"
-              style="height: 120px"
-            />
-            <div class="category-label">Top Deals</div>
-          </div>
-          <div class="category-wrapper">
-            <img
-              src="./assets/img/Fasion/b5.jpeg"
-              alt="Accessories"
-              style="height: 120px"
-            />
-            <div class="category-label">Accessories</div>
-          </div>
-        </div>
-
-        <!-- Main Banner -->
-        <div class="tp-slider-2-shape">
-          <!-- <img
-            class="tp-slider-2-shape-1"
-            src="assets/img/slider/2/shape/shape-1.png"
-            alt=""
-          /> -->
-        </div>
-        <div class="container-fluid" style="background-color: lightblue">
-          <div class="row align-items-center">
-            <div class="col-12 text-center">
-              <div class="tp-slider-content-2">
-                <span></span>
-                <h3 class="tp-slider-title-2">The Clothing Collection</h3>
-                <div class="tp-slider-btn-2">
-                  <a href="shop.html" class="tp-btn tp-btn-border"
-                    >Shop Collection</a
-                  >
-                </div>
+      <section class="tp-slider-area p-relative z-index-1">
+        <div class="tp-slider-active-2 swiper-container">
+          <div class="swiper-wrapper">
+            <div
+              class="tp-slider-item-2 tp-slider-height-2 p-relative swiper-slide grey-bg-5 d-flex align-items-end"
+            >
+              <div class="tp-slider-2-shape">
+                <img
+                  class="tp-slider-2-shape-1"
+                  src="assets/img/slider/2/shape/shape-1.png"
+                  alt=""
+                />
               </div>
-              <div class="tp-slider-thumb-2-wrapper p-relative">
-                <div class="tp-slider-thumb-2 text-center mt-4">
-                  <img
-                    src="assets/img/Fasion/woman-7633843_640-removebg-preview.png"
-                    alt=""
-                  />
+              <div class="container">
+                <div class="row align-items-center">
+                  <div class="col-12 text-center">
+                    <div class="tp-slider-content-2">
+                      <span>New Arrivals 2025</span>
+                      <h3 class="tp-slider-title-2">The Clothing Collection</h3>
+                      <div class="tp-slider-btn-2">
+                        <a href="shop.html" class="tp-btn tp-btn-border"
+                          >Shop Collection</a
+                        >
+                      </div>
+                    </div>
+                    <div class="tp-slider-thumb-2-wrapper p-relative">
+                      <div class="tp-slider-thumb-2 text-center mt-4">
+                        <img
+                          src="assets/img/Fasion/woman-7633843_640-removebg-preview.png"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            <!-- Add other slides here -->
           </div>
+          <div class="tp-swiper-dot tp-slider-2-dot"></div>
         </div>
       </section>
 
