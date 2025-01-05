@@ -27,6 +27,47 @@
   </head>
 
   <style>
+    @media (max-width: 768px) {
+      .tp-banner-item-2 {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .tp-banner-thumb-2 {
+        width: 100%;
+        height: auto;
+        margin: 0;
+      }
+
+      .tp-banner-content {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+      }
+
+      .tp-banner-btn-2 {
+        margin-top: 15px;
+      }
+
+      .offer-content-box,
+      .tp-btn {
+        width: 90%; /* Adjust for smaller screens */
+      }
+
+      .tp-banner-title-2 {
+        font-size: 18px;
+      }
+
+      .offer-content-box {
+        font-size: 14px;
+      }
+
+      .tp-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+    }
+
     /* General Reset */
     /* * {
         margin: 0;
@@ -46,6 +87,148 @@
         line-height: 1.6;
         background-color: #f9f9f9;
       } */
+
+    .banner-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: -40px;
+      z-index: 2;
+      position: relative;
+      text-align: center;
+    }
+
+    .banner-content .badge {
+      display: inline-block;
+      background-color: red;
+      color: white;
+      padding: 5px 10px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      border-radius: 4px;
+    }
+
+    .banner-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .banner-subtitle {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .btn-primary {
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .banner-image img {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    /* top category  */
+    /* Top Category Section */
+    .top-category-row {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      margin-bottom: 10px;
+    }
+
+    .top-category-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 60px;
+    }
+
+    .top-category-icon,
+    .top-category-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%; /* Circular images/icons */
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add some depth */
+    }
+
+    .top-category-label {
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    /* Top Category Section */
+    .top-category-row {
+      display: flex;
+      justify-content: flex-start; /* Align items to the left for horizontal scroll */
+      align-items: center;
+      padding: 10px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      margin-bottom: 10px;
+      overflow-x: auto; /* Enable horizontal scroll for mobile view */
+      white-space: nowrap; /* Prevent wrapping */
+      scroll-snap-type: x mandatory; /* Smooth scroll snapping */
+    }
+
+    .top-category-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 70px; /* Slightly wider for better spacing */
+      margin: 0 10px; /* Add space between items */
+      scroll-snap-align: center; /* Center each item on scroll */
+    }
+
+    .top-category-icon,
+    .top-category-img {
+      width: 60px; /* Increased size for better visibility on mobile */
+      height: 60px;
+      border-radius: 50%; /* Circular images/icons */
+      object-fit: cover;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add some depth */
+    }
+
+    .top-category-label {
+      margin-top: 5px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #333;
+      white-space: nowrap; /* Prevents text wrapping */
+    }
+
+    /* Mobile View Adjustments */
+    @media screen and (max-width: 768px) {
+      .top-category-wrapper {
+        width: 80px; /* Increase width for better touch targets */
+        margin: 0 12px; /* Add extra space between items */
+      }
+
+      .top-category-icon,
+      .top-category-img {
+        width: 55px; /* Slightly smaller size for better layout */
+        height: 55px;
+      }
+
+      .top-category-label {
+        font-size: 11px; /* Adjust font size for smaller screens */
+      }
+    }
 
     /* Search Bar */
     .search-bar {
@@ -1803,13 +1986,172 @@
           </div>
         </div>
 
+        <!-- top category  -->
+
+        <!-- Top Category Section -->
+        <div class="top-category-row">
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/icons8-home-24.png"
+              alt="Home"
+              class="top-category-icon"
+            />
+            <div class="top-category-label">Home</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i6.jpeg"
+              alt="Winterwear"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Winterwear</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i4.jpeg"
+              alt="Men"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Men</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i3.jpeg"
+              alt="Women"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Women</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i2.jpeg"
+              alt="Kids"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Kids</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i5.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Sale</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i1.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Home & Kitchen</div>
+          </div>
+
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i6.jpeg"
+              alt="Winterwear"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Winterwear</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i4.jpeg"
+              alt="Men"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Men</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i3.jpeg"
+              alt="Women"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Women</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i2.jpeg"
+              alt="Kids"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Kids</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i5.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Sale</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i1.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Home & Kitchen</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i6.jpeg"
+              alt="Winterwear"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Winterwear</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i4.jpeg"
+              alt="Men"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Men</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i3.jpeg"
+              alt="Women"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Women</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i2.jpeg"
+              alt="Kids"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Kids</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i5.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Sale</div>
+          </div>
+          <div class="top-category-wrapper">
+            <img
+              src="./assets/img/Fasion/i1.jpeg"
+              alt="Beauty"
+              class="top-category-img"
+            />
+            <div class="top-category-label">Home & Kitchen</div>
+          </div>
+        </div>
+
         <!-- Category Row -->
         <div class="category-row">
           <div class="category-wrapper">
             <img
               src="./assets/img/Fasion/b1.jpeg"
               alt="AJIO Luxe"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Khazoor LUXE</div>
           </div>
@@ -1817,7 +2159,7 @@
             <img
               src="./assets/img/Fasion/b2.jpeg"
               alt="Sneakerhood"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Genz store</div>
           </div>
@@ -1825,7 +2167,7 @@
             <img
               src="./assets/img/Fasion/b3.jpeg"
               alt="Clearance Store"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Accessories</div>
           </div>
@@ -1833,7 +2175,7 @@
             <img
               src="./assets/img/Fasion/b4.jpeg"
               alt="Top Deals"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Beauty</div>
           </div>
@@ -1841,7 +2183,7 @@
             <img
               src="./assets/img/Fasion/b5.jpeg"
               alt="Accessories"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Top Deals</div>
           </div>
@@ -1849,7 +2191,7 @@
             <img
               src="./assets/img/Fasion/b3.jpeg"
               alt="Clearance Store"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Clearance Store</div>
           </div>
@@ -1857,7 +2199,7 @@
             <img
               src="./assets/img/Fasion/b4.jpeg"
               alt="Top Deals"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Top Deals</div>
           </div>
@@ -1865,9 +2207,49 @@
             <img
               src="./assets/img/Fasion/b5.jpeg"
               alt="Accessories"
-              style="height: 120px"
+              style="height: 70px"
             />
             <div class="category-label">Accessories</div>
+          </div>
+          <div class="category-wrapper">
+            <img
+              src="./assets/img/Fasion/b1.jpeg"
+              alt="AJIO Luxe"
+              style="height: 70px"
+            />
+            <div class="category-label">Khazoor LUXE</div>
+          </div>
+          <div class="category-wrapper">
+            <img
+              src="./assets/img/Fasion/b2.jpeg"
+              alt="Sneakerhood"
+              style="height: 70px"
+            />
+            <div class="category-label">Genz store</div>
+          </div>
+          <div class="category-wrapper">
+            <img
+              src="./assets/img/Fasion/b3.jpeg"
+              alt="Clearance Store"
+              style="height: 70px"
+            />
+            <div class="category-label">Accessories</div>
+          </div>
+          <div class="category-wrapper">
+            <img
+              src="./assets/img/Fasion/b4.jpeg"
+              alt="Top Deals"
+              style="height: 70px"
+            />
+            <div class="category-label">Beauty</div>
+          </div>
+          <div class="category-wrapper">
+            <img
+              src="./assets/img/Fasion/b5.jpeg"
+              alt="Accessories"
+              style="height: 70px"
+            />
+            <div class="category-label">Top Deals</div>
           </div>
         </div>
 
@@ -1879,25 +2261,29 @@
             alt=""
           /> -->
         </div>
-        <div class="container-fluid" style="background-color: lightblue">
-          <div class="row align-items-center">
-            <div class="col-12 text-center">
-              <div class="tp-slider-content-2">
-                <span></span>
-                <h3 class="tp-slider-title-2">The Clothing Collection</h3>
-                <div class="tp-slider-btn-2">
-                  <a href="shop.html" class="tp-btn tp-btn-border"
-                    >Shop Collection</a
-                  >
-                </div>
-              </div>
-              <div class="tp-slider-thumb-2-wrapper p-relative">
-                <div class="tp-slider-thumb-2 text-center mt-4">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-center p-3">
+              <!-- Banner Content -->
+              <!-- <div class="banner-content">
+                <span class="badge">Category of the Day</span>
+                <h3 class="banner-title">Winterwear</h3>
+                <p class="banner-subtitle">30–60% OFF</p>
+                <a href="shop.html" class="btn btn-primary">Shop Now</a>
+              </div> -->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <!-- Banner Image -->
+              <div class="banner-image">
+                <a href="index.html" target="_blank">
                   <img
-                    src="assets/img/Fasion/woman-7633843_640-removebg-preview.png"
-                    alt=""
+                    src="https://www.lavanyathelabel.com/cdn/shop/collections/04_ethnicwear_1400x_a34fb8dc-f016-43eb-95bd-bec3858edc01_1400x.webp?v=1732004280"
+                    alt="Winterwear"
+                    class="img-fluid w-100"
                   />
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -1912,95 +2298,197 @@
           <div class="row tp-gx-20">
             <div class="col-xxl-4 col-lg-6">
               <div
-                class="tp-banner-item-2 p-relative z-index-1 grey-bg-2 mb-20 fix"
+                class="tp-banner-item-2 p-relative z-index-1 mb-20 fix d-flex flex-row-reverse"
+                style="
+                  background: linear-gradient(to bottom, blue, black);
+                  height: 300px;
+                  overflow: hidden;
+                "
               >
+                <!-- Image on the right -->
                 <div
                   class="tp-banner-thumb-2 include-bg transition-3"
-                  data-background="assets/img/banner/2/banner-1.jpg"
+                  style="
+                    background-image: url('./assets/img/Fasion/Soch_564x940._SY530_QL85_-removebg-preview.png');
+                    background-size: contain;
+                    background-position: center;
+                    height: 100%;
+                    width: 50%;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                  "
                 ></div>
-                <h3 class="tp-banner-title-2">
-                  <a href="shop.html"
-                    >T-Shirt Tunic <br />
-                    Tops Blouse</a
+
+                <!-- Text on the left -->
+                <div
+                  class="tp-banner-content"
+                  style="
+                    width: 50%;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                  "
+                >
+                  <h3
+                    class="tp-banner-title-2"
+                    style="color: white; margin-bottom: 10px"
                   >
-                </h3>
-                <div class="tp-banner-btn-2">
-                  <a
-                    href="shop.html"
-                    class="tp-btn tp-btn-border tp-btn-border-sm"
-                    >Shop Now
-                    <svg
-                      width="17"
-                      height="15"
-                      viewBox="0 0 17 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <a
+                      href="shop.html"
+                      style="color: white; text-decoration: none"
+                      >Suit and Salwar <br />Ethnic Wear</a
                     >
-                      <path
-                        d="M16 7.49988L1 7.49988"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M9.9502 1.47554L16.0002 7.49954L9.9502 13.5245"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
+                  </h3>
+
+                  <!-- Offer Content Box -->
+                  <div class="offer-content-box">
+                    <p
+                      class="offer-text"
+                      style="
+                        font-size: 16px;
+                        color: lightpink;
+                        font-weight: bold;
+                      "
+                    >
+                      50% Off on Select Ethnic Wear!
+                    </p>
+                  </div>
+
+                  <!-- Shop Now Button -->
+                  <div class="tp-banner-btn-2">
+                    <a
+                      href="shop.html"
+                      class="tp-btn tp-btn-border tp-btn-border-sm"
+                      style="background-color: white"
+                      >Shop Now
+                      <svg
+                        width="17"
+                        height="15"
+                        viewBox="0 0 17 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 7.49988L1 7.49988"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.9502 1.47554L16.0002 7.49954L9.9502 13.5245"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
             <div class="col-xxl-4 col-lg-6">
               <div
-                class="tp-banner-item-2 p-relative z-index-1 grey-bg-2 mb-20 fix"
+                class="tp-banner-item-2 p-relative z-index-1 mb-20 fix d-flex flex-row-reverse"
+                style="
+                  background: linear-gradient(to bottom, cyan, black);
+                  height: 300px;
+                  overflow: hidden;
+                "
               >
+                <!-- Image on the right -->
+
+                <!-- <img src="./assets/img/Fasion/girls._CB469401626_-removebg-preview.png" alt=""> -->
                 <div
                   class="tp-banner-thumb-2 include-bg transition-3"
-                  data-background="assets/img/banner/2/banner-2.jpg"
+                  style="
+                    background-image: url('./assets/img/Fasion/girls._CB469401626_-removebg-preview.png');
+                    background-size: contain;
+                    background-position: center;
+                    height: 100%;
+                    width: 50%;
+                    margin-top: 10px;
+                    margin-right: 10px;
+                  "
                 ></div>
-                <h3 class="tp-banner-title-2">
-                  <a href="shop.html"
-                    >Satchel Tote <br />
-                    Crossbody Bags</a
+
+                <!-- Text on the left -->
+                <div
+                  class="tp-banner-content"
+                  style="
+                    width: 50%;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    height: 100%;
+                  "
+                >
+                  <h3
+                    class="tp-banner-title-2"
+                    style="color: white; margin-bottom: 10px"
                   >
-                </h3>
-                <div class="tp-banner-btn-2">
-                  <a
-                    href="shop.html"
-                    class="tp-btn tp-btn-border tp-btn-border-sm"
-                    >Shop Now
-                    <svg
-                      width="17"
-                      height="15"
-                      viewBox="0 0 17 15"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <a
+                      href="shop.html"
+                      style="color: white; text-decoration: none"
                     >
-                      <path
-                        d="M16 7.49988L1 7.49988"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        d="M9.9502 1.47554L16.0002 7.49954L9.9502 13.5245"
-                        stroke="currentColor"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </svg>
-                  </a>
+                      Kids Fashion <br />Clothing Collection
+                    </a>
+                  </h3>
+
+                  <!-- Offer Content Box -->
+                  <div class="offer-content-box">
+                    <p
+                      class="offer-text"
+                      style="
+                        font-size: 16px;
+                        color: lightpink;
+                        font-weight: bold;
+                      "
+                    >
+                      Buy One, Get One Free <br />on All Collection!
+                    </p>
+                  </div>
+
+                  <!-- Shop Now Button -->
+                  <div class="tp-banner-btn-2">
+                    <a
+                      href="shop.html"
+                      class="tp-btn tp-btn-border tp-btn-border-sm"
+                      style="background-color: white"
+                      >Shop Now
+                      <svg
+                        width="17"
+                        height="15"
+                        viewBox="0 0 17 15"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M16 7.49988L1 7.49988"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          d="M9.9502 1.47554L16.0002 7.49954L9.9502 13.5245"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="col-xxl-4 col-lg-6">
+
+            <!-- <div class="col-xxl-4 col-lg-6">
               <div
                 class="tp-banner-item-2 p-relative z-index-1 grey-bg-2 mb-20 fix"
               >
@@ -2044,7 +2532,7 @@
                   </a>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </section>
@@ -12002,9 +12490,11 @@
                       </a>
                     </div>
                     <p class="tp-footer-desc">
-                      We are a team of designers and developers that create high
-                      quality WordPress
+                      We are a team of expert designers and craftsmen,
+                      specializing in creating high-quality, customized fashion
+                      pieces tailored to your unique style.
                     </p>
+
                     <div class="tp-footer-social">
                       <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                       <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -12158,8 +12648,8 @@
                 <div class="col-md-6">
                   <div class="tp-footer-copyright">
                     <p>
-                      © 2025 All Rights Reserved | HTML Template by
-                      <a href="index.html">Themepure</a>.
+                      © 2025 All Rights Reserved | by
+                      <a href="index.html">Khazoor</a>.
                     </p>
                   </div>
                 </div>
