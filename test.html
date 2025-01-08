@@ -3,308 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fashion Sale</title>
+    <title>Shop by Category</title>
+    <!-- Include Swiper CSS -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
     />
-
+    <!-- Add custom CSS styles -->
     <style>
-      /* General Reset */
-      /* * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      } */
-
-      /* Banner Image */
-      .banner-image img {
+      .tp-category-thumb-2 img {
         width: 100%;
-        height: auto;
-        border-radius: 0;
+        height: auto; /* Ensures image scaling */
       }
-
-      /* body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
-        background-color: #f9f9f9;
-      } */
-
-      /* Search Bar */
-      .search-bar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-        background-color: #f4f4f4;
-        border-bottom: 1px solid #ccc;
-      }
-
-      .search-bar input {
-        flex: 1;
+      .tp-category-item-2 {
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 20px;
-        outline: none;
-      }
-
-      .search-bar .icons {
-        display: flex;
-        gap: 10px;
-        margin-left: 10px;
-      }
-
-      .search-bar .icons i {
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
-
-      /* Logo */
-      .logo {
         text-align: center;
+        border: 1px solid #ddd;
         margin: 10px 0;
       }
-
-      .logo img {
-        max-width: 150px;
-        height: auto;
+      .tp-category-content-2 {
+        padding: 15px 0;
       }
-
-      /* Category Row */
-      .category-row {
-        display: flex;
-        justify-content: space-around;
-        padding: 10px 0;
-        background-color: #fff;
-        overflow-x: auto;
-      }
-
-      .category-item img {
-        width: 30px;
-        height: 30px;
-        border-radius: 10px;
-        object-fit: cover;
-        border: 2px solid #ddd;
-      }
-
-      .category-label {
-        text-align: center;
-        margin-top: 5px;
-        font-size: 0.8rem;
-        color: #000;
-      }
-
-      .category-wrapper {
-        text-align: center;
-        flex-shrink: 0;
-        margin: 0 10px;
-      }
-
-      /* Main Banner */
-      .main-banner {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: #ffcc99; /* Light Orange Background */
-        color: #fff;
-        overflow: hidden;
-        width: 100%;
-      }
-
-      .banner-content {
-        flex: 1;
-        padding: 20px;
-      }
-
-      .sale-badge {
-        background: #f00;
-        color: #fff;
-        padding: 5px 10px;
-        font-size: 0.9rem;
-        border-radius: 3px;
-        display: inline-block;
-      }
-
-      .category-highlight {
-        margin-top: 10px;
-        font-size: 1.1rem;
-      }
-
-      .banner-content h2 {
-        font-size: 2rem;
-        margin: 15px 0;
-      }
-
-      .banner-content p {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-
-      .shop-now {
+      .tp-btn {
         padding: 10px 20px;
-        background: #000;
-        color: #fff;
+        background-color: #ff6600;
+        color: white;
+        text-transform: uppercase;
         border: none;
-        border-radius: 3px;
         cursor: pointer;
       }
-
-      .shop-now:hover {
-        background: #333;
+      .tp-btn.tp-btn-border {
+        border: 1px solid #ff6600;
+        background-color: transparent;
       }
-
-      /* Banner Image */
-      .banner-image img {
-        width: 100%; /* Make Image Full Width */
-        height: auto;
-        border-radius: 10px;
+      .swiper-slide {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
       }
-
-      /* Responsive Styles */
-      @media (max-width: 768px) {
-        .main-banner {
-          flex-direction: column;
-          text-align: center;
+      .swiper-container {
+        padding-bottom: 40px;
+      }
+      /* Responsive design */
+      @media screen and (max-width: 767px) {
+        .swiper-container {
+          display: flex;
+          justify-content: space-between;
         }
-
-        .banner-content {
-          padding: 10px;
-        }
-
-        .banner-image img {
-          width: 80%;
-          margin-top: 20px;
-          border-radius: 0;
+        .swiper-slide {
+          width: 32%; /* 3 images in one row on mobile */
         }
       }
-
-      @media (max-width: 480px) {
-        .search-bar input {
-          padding: 8px;
-          font-size: 0.9rem;
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+        .swiper-container {
+          display: flex;
+          justify-content: space-between;
         }
-
-        .banner-content h2 {
-          font-size: 1.5rem;
+        .swiper-slide {
+          width: 48%; /* 2 images per row on tablets */
         }
-
-        .banner-content p {
-          font-size: 1.2rem;
-        }
-
-        .shop-now {
-          padding: 8px 15px;
-          font-size: 0.9rem;
-        }
-
-        .banner-image img {
-          width: 100%;
+      }
+      @media screen and (min-width: 1024px) {
+        .swiper-slide {
+          width: 30%; /* 3 images per row on larger screens */
         }
       }
     </style>
   </head>
   <body>
-    <section class="fashion-sale">
-      <!-- Logo -->
-      <div class="logo">
-        <img src="./assets/img/Fasion/logo1.png" alt="Logo" />
-      </div>
-
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search by product, brands..." />
-        <div class="icons">
-          <i class="fas fa-heart"></i>
-          <i class="fas fa-shopping-bag"></i>
+    <section class="tp-category-area pb-95 pt-95" style="margin-top: -80px">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-section-title-wrapper-2 text-center mb-50">
+              <span class="tp-section-title-pre-2">
+                Shop by Category
+                <svg
+                  width="82"
+                  height="22"
+                  viewBox="0 0 82 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M81 14.5798C0.890564 -8.05914 -5.81154 0.0503902 5.00322 21"
+                    stroke="currentColor"
+                    stroke-opacity="0.3"
+                    stroke-width="2"
+                    stroke-miterlimit="3.8637"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </span>
+              <h3 class="tp-section-title-2">Popular on the Khazoor store.</h3>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- Category Row -->
-      <div class="category-row">
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b1.jpeg"
-            alt="AJIO Luxe"
-            style="height: 120px"
-          />
-          <div class="category-label">AJIO LUXE</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b2.jpeg"
-            alt="Sneakerhood"
-            style="height: 120px"
-          />
-          <div class="category-label">Sneakerhood</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b3.jpeg"
-            alt="Clearance Store"
-            style="height: 120px"
-          />
-          <div class="category-label">Clearance Store</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b4.jpeg"
-            alt="Top Deals"
-            style="height: 120px"
-          />
-          <div class="category-label">Top Deals</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b5.jpeg"
-            alt="Accessories"
-            style="height: 120px"
-          />
-          <div class="category-label">Accessories</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b3.jpeg"
-            alt="Clearance Store"
-            style="height: 120px"
-          />
-          <div class="category-label">Clearance Store</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b4.jpeg"
-            alt="Top Deals"
-            style="height: 120px"
-          />
-          <div class="category-label">Top Deals</div>
-        </div>
-        <div class="category-wrapper">
-          <img
-            src="./assets/img/Fasion/b5.jpeg"
-            alt="Accessories"
-            style="height: 120px"
-          />
-          <div class="category-label">Accessories</div>
-        </div>
-      </div>
-
-      <!-- Main Banner -->
-      <div class="main-banner">
-        <div class="banner-content">
-          <div class="sale-badge">GIANT FASHION SALE</div>
-          <div class="category-highlight">⭐ Category Of The Day ⭐</div>
-          <h2>Winterwear</h2>
-          <p>30-60% OFF*</p>
-          <button class="shop-now">SHOP NOW</button>
-        </div>
-        <div class="banner-image">
-          <img
-            src="./assets/img/Fasion/istockphoto-965902560-612x612.jpg"
-            alt="Winterwear Sale"
-          />
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-category-slider-2">
+              <div class="swiper-container tp-category-slider-active-2">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="tp-category-item-2 p-relative z-index-1 text-center"
+                    >
+                      <div class="tp-category-thumb-2">
+                        <img
+                          src="https://www.lavanyathelabel.com/cdn/shop/files/0H8A4118_82714b7c-dedb-42da-9c89-bdb3360ad1e4_1200x.jpg?v=1735979930"
+                          alt="Stylish women’s clothing by Lavanya the Label, product image"
+                        />
+                      </div>
+                      <div class="tp-category-content-2">
+                        <span> <style></style>From INR3405</span>
+                        <h3 class="tp-category-title-2">
+                          <a href="product-details.html"
+                            >Women's Beautiful Embroidered Lehenga</a
+                          >
+                        </h3>
+                        <div class="tp-category-btn-2">
+                          <a
+                            href="product-details.html"
+                            class="tp-btn tp-btn-border"
+                            >Shop Now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="tp-category-item-2 p-relative z-index-1 text-center"
+                    >
+                      <div class="tp-category-thumb-2">
+                        <img
+                          src="https://www.lavanyathelabel.com/cdn/shop/files/LBL101KS437_2_1200x.jpg?v=1735980799"
+                          alt="Stylish women’s clothing by Lavanya the Label, product image"
+                        />
+                      </div>
+                      <div class="tp-category-content-2">
+                        <span>From INR3405</span>
+                        <h3 class="tp-category-title-2">
+                          <a href="product-details.html"
+                            >Women's Beautiful Embroidered Lehenga</a
+                          >
+                        </h3>
+                        <div class="tp-category-btn-2">
+                          <a
+                            href="product-details.html"
+                            class="tp-btn tp-btn-border"
+                            >Shop Now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                    <div
+                      class="tp-category-item-2 p-relative z-index-1 text-center"
+                    >
+                      <div class="tp-category-thumb-2">
+                        <img
+                          src="https://www.lavanyathelabel.com/cdn/shop/files/0H8A4230_0cbb5518-8fdc-400b-9478-9a883fca53d4_1200x.jpg?v=1735979921"
+                          alt="Stylish women’s clothing by Lavanya the Label, product image"
+                        />
+                      </div>
+                      <div class="tp-category-content-2">
+                        <span>From INR3405</span>
+                        <h3 class="tp-category-title-2">
+                          <a href="product-details.html"
+                            >Women's Beautiful Embroidered Lehenga</a
+                          >
+                        </h3>
+                        <div class="tp-category-btn-2">
+                          <a
+                            href="product-details.html"
+                            class="tp-btn tp-btn-border"
+                            >Shop Now</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Add more slides as needed -->
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Swiper initialization and settings -->
+    <script>
+      var swiper = new Swiper(".tp-category-slider-active-2", {
+        slidesPerView: 3, // Default: show 3 images per slide on mobile view
+        spaceBetween: 10, // Space between images
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          // When the screen width is >= 768px, show 2 images per slide
+          768: {
+            slidesPerView: 2,
+          },
+          // When the screen width is >= 1024px, show 3 images per slide
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
